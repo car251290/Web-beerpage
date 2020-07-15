@@ -1,6 +1,7 @@
 import './App.css';
 import { fetchBeer } from './api/fetchbeer';
 import React, { useState } from 'react';
+import IconBeer from './IconBeer';
 
 
 const App = () => {
@@ -18,8 +19,12 @@ const App = () => {
  
     }
 
-    return(
-      <div className="main-container">
+    return( 
+        
+    <div className="main-container">
+        <div>
+      <IconBeer/>
+      </div>
       <input type="text"className="search" placeholder="Search..."value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
       {Beer.main && (
           <div className="beer">
@@ -31,13 +36,16 @@ const App = () => {
                   {Math.round(Beer.main.type)}
                   <sup>&deg;C</sup>
               </div>
-             
+              <IconBeer/>
           </div>
-
+        
       )}
+      
   </div>
-
+ 
     );
 }
+
+
 
 export default App;
