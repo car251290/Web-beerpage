@@ -28,15 +28,14 @@ const App = () => {
       <input type="text"className="search" placeholder="Search..."value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
       {Beer.main && (
           <div className="beer">
-              <h2 className="beer-name">
-                  <span>{Beer.name}</span>
-                  <sup>{Beer.sys.type}</sup>
-              </h2>
-              <div className="beer-temp">
-                  {Math.round(Beer.main.type)}
-                  <sup>&deg;C</sup>
-              </div>
-              <IconBeer/>
+              <h1 className="beer-name">
+
+              <li key={beer.id}>
+             <h3>{beer.name}</h3>
+              <p>{beer.description}</p>
+              </li>
+              </h1>
+            
           </div>
         
       )}
