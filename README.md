@@ -11,6 +11,9 @@ I made the design of the page because it will be interesting this summer to have
 React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.
 Many platforms, one React. Create platform-specific versions of components so a single codebase can share code across platforms. With React Native
 
+## Function Components and Class Components
+With React, you can make components using either classes or functions. Originally, class components were the only components that could have state. But since the introduction of React's Hooks API, you can add state and more to function component
+
 ## Available Scripts
 
 In the project directory, you can run:
