@@ -7,6 +7,10 @@ Add an search bar where the usar can use for the searching of the beer and using
 # the design
 I made the design of the page because it will be interesting this summer to have information about beer and display it in an web page
 
+# React-Native
+React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.
+Many platforms, one React. Create platform-specific versions of components so a single codebase can share code across platforms. With React Native
+
 ## Available Scripts
 
 In the project directory, you can run:
