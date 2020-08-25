@@ -14,6 +14,10 @@ Many platforms, one React. Create platform-specific versions of components so a 
 ## Function Components and Class Components
 With React, you can make components using either classes or functions. Originally, class components were the only components that could have state. But since the introduction of React's Hooks API, you can add state and more to function component
 
+# Card
+
+Cards are a great way to display information, usually containing content and actions about a single subject. Cards can contain images, buttons, text and more.
+
 ## Available Scripts
 
 In the project directory, you can run:
