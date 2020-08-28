@@ -17,6 +17,7 @@ With React, you can make components using either classes or functions. Originall
 # Card
 
 Cards are a great way to display information, usually containing content and actions about a single subject. Cards can contain images, buttons, text and more.
+I am using this Cards for get the strings display in a Card where can get the image and the information of the beer
 
 ## Available Scripts
 
