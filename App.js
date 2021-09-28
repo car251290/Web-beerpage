@@ -1,44 +1,53 @@
-import React, { Component } from 'react';
+import React, { useState,useEffect,Component } from 'react';
+//import {getBeerData} from './api/index';
 import { render } from 'react-dom';
 import Header from './componets/header';
+import axios from 'axios';
 import Beers from './componets/beers';
-
 import './styles/style.css';
 import './App.css'
-import { ScrollView } from "@cantonjs/react-scroll-view";
 
-class App extends Component {
-  constructor() {
-    super();
+//class App extends Component {
+  //constructor() {
+    //super();
 
-    this.state = {
-      beers: []
-    }
-  }
+    //this.state = {
+      //beers: []
+    //}
+  //}
+const App = () => {
+    const [beers, setbeers] = useState([])
 
-  componentDidMount() {
-    fetch(' https://api.punkapi.com/v2/beers').then((response) => {
-      return response.json();
-    }).then((data) => {
-      console.log(data);
-      this.setState({
-        beers: data
-      })
-    })
-  }
 
-  render() {
+  //'https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries',
+  //' https://api.punkapi.com/v2/beers'
+
+ 
+  const fetchAdvice = async(beers) => {
+    const response = await axios.get('https://api.openbrewerydb.org/breweries');
+      setbeers (response.data);
+
+      //setAdvice('advice');
+      //this.setState({advice});
+      setbeers({beers});
+
+    
+}
+useEffect((beers)=>{
+  fetchAdvice({beers})
+},[beers])
+
+//useEffect (()=>{
+ // getBeerData()
+  //.then((data)=> setbeers(data))
+//})
+  
     return (
       <div className= 'main-container'>
-       <Header />
-        <div >
-         <ScrollView style={{ height: '100vh' }}>
-          <Beers beers={this.state.beers} />
-          </ScrollView>
-       </div>
+        <Header />
+        <Beers beers={setbeers}/>
       </div>
-    );
-  }
+    );  
 }
 
 render(<App />, document.getElementById('root'));
