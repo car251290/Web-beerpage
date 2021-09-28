@@ -12,3 +12,14 @@ With React, you can make components using either classes or functions. Originall
 Cards are a great way to display information, usually containing content and actions about a single subject. Cards can contain images, buttons, text and more.
 I am using this Cards for get the strings display in a Card where can get the image and the information of the beer
 
+
+## Framework: React(JS)
+
+## Language: 
+### JavaScript
+### HTML & CSS
+
+# Requirements
+* Visual Studio
+* Macbook
+* Material UI (for the design in mobile device and responsive application)
