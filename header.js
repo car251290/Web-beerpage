@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import '../styles/style.css'
 
+import Beers from '../Beer/beers';
 
 class Header extends Component {
-
   render() {
     return (
       <header>
         <h1>Beer information</h1>
       </header>
+      
     );
   }
 }
