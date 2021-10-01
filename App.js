@@ -23,7 +23,7 @@ const App = () => {
   //' https://api.punkapi.com/v2/beers'
 
  
-  const fetchAdvice = async(beers) => {
+  const fetchBeers = async(beers) => {
     const response = await axios.get('https://api.openbrewerydb.org/breweries');
       setbeers (response.data);
 
@@ -34,13 +34,9 @@ const App = () => {
     
 }
 useEffect((beers)=>{
-  fetchAdvice({beers})
+  fetchBeers({beers})
 },[beers])
 
-//useEffect (()=>{
- // getBeerData()
-  //.then((data)=> setbeers(data))
-//})
   
     return (
       <div className= 'main-container'>
