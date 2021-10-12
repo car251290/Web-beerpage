@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-
+import {AppBar,Toolbar,Typography,InputBase,Box} from '@material-ui/core';
 import Beers from '../Beer/beers';
-
-class Header extends Component {
-  render() {
+import useStyles from './styles';
+const Header = () => {
+  const classes = useStyles();
     return (
-      <header>
-        <h1>Beer information</h1>
-      </header>
+      <AppBar>
+        <Toolbar className={classes.toolbar}>
+        <Typography variant= "h5" className={classes.title}>
+           Beer Information
+        </Typography>
+
+        </Toolbar>
+      </AppBar>
+     
       
     );
-  }
+  
 }
 
 export default Header;
