@@ -1,42 +1,17 @@
 import React, { useState,useEffect,Component } from 'react';
-//import {getBeerData} from './api/index';
+import {fetchBeer} from './api/index';
 import { render } from 'react-dom';
-import Header from './componets/header';
+import Header from './componets/Header/header';
 import axios from 'axios';
-import Beers from './componets/beers';
-import './styles/style.css';
+import Beers from './componets/Beer/beers';
 import './App.css'
 
-//class App extends Component {
-  //constructor() {
-    //super();
-
-    //this.state = {
-      //beers: []
-    //}
-  //}
 const App = () => {
     const [beers, setbeers] = useState([])
 
-
-  //'https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries',
-  //' https://api.punkapi.com/v2/beers'
-
- 
-  const fetchBeers = async(beers) => {
-    const response = await axios.get('https://api.openbrewerydb.org/breweries');
-      setbeers (response.data);
-
-      //setAdvice('advice');
-      //this.setState({advice});
-      setbeers({beers});
-
-    
-}
 useEffect((beers)=>{
-  fetchBeers({beers})
+  setbeers({beers})
 },[beers])
-
   
     return (
       <div className= 'main-container'>
@@ -49,3 +24,4 @@ useEffect((beers)=>{
 render(<App />, document.getElementById('root'));
 
 export default App;
+
