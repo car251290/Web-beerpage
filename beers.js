@@ -1,17 +1,29 @@
 import React from 'react';
-import '../styles/style.css'
-
-
+import {Card, CardMedia, CardContent, CardActions, } from '@material-ui/core';
 
 const Beers =({beers}) => {
-  return(
+
+
+  return( 
+       
+    <div className="main-container">
+        <div>
+      </div>
+      {Beers.main && (
+          <div className="beer">
+              <h1 className="beer-name">
+              <li key={beers.id}>
+             <h3>{beers.name}</h3>
+              <p>{beers.country}</p>
+              </li>
+              </h1>
+          </div>
+        
+      )}
       
-      <li key={beers.id}> 
-      <h3>{beers.name}</h3>
-      <h5> {beers.website_url}</h5>
-    </li>
-    
-  )
+  </div>
+ 
+    );
 }
 
 export default Beers;
