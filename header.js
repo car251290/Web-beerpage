@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {AppBar,Toolbar,Typography,InputBase,Box} from '@material-ui/core';
-import Beers from '../Beer/beers';
 import useStyles from './styles';
 const Header = () =>{
   const classes = useStyles();
