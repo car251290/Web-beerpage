@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {AppBar,Toolbar,Typography,InputBase,Box} from '@material-ui/core';
 import Beers from '../Beer/beers';
 import useStyles from './styles';
-const Header = () => {
+const Header = () =>{
   const classes = useStyles();
     return (
-    <AppBar position ="static">
+      <AppBar position ="static">
         <Toolbar className={classes.toolbar}>
         <Typography variant= "h5" className={classes.title}>
            Beer Information
