@@ -16,8 +16,10 @@ I am using this Cards for get the strings display in a Card where can get the im
 ## Framework: React(JS)
 
 ## Language: 
-### JavaScript
-### HTML & CSS
+* JavaScript
+* HTML & CSS
+* React
+* Node.js
 
 # Requirements
 * Visual Studio
